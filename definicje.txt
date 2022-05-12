@@ -1,0 +1,32 @@
+Wektor - to uporządkowana para punktów (strzałka wyznaczona przez dwa punkty). Wektor ma trzy cechy, które go jednoznacznie wyznaczają: długość (czasami inaczej zwana modułem lub wartością) kierunek (kierunek prostej zawierającej wektor)
+
+kombinacja liniowa - 
+mamy wektory e1 i e2 kombinacja liniowa to alfa*e1 + beta*e2
+
+baza w przestrzeni RX- zbioor wektorów liniowo niezaleznych rozpinających przestrzeń, czyli za pomocą wektorów bazy można stworzyć każdy inny wektor w przestrzeni RX za pomoca kombinacji liniowej tej bazy
+Jeśli wetory są niezalezne liniowo to ich ilosc w bazie jest wymiarem w przestrzeni. 
+2 wektory to R2, 5 wektorów to R5
+
+co to znaczy, że wektory są ortogonalne? To znaczy, że są do siebie prostopadłe 
+jeśli 2 wektory są prostopadle to ich iloczyn skalarny równa się 0
+
+Unormować wektor to podzielenie go przez jego długość, czyli zmienić jego dlugosc tak zeby jego dlugość była równa jeden
+
+baza ortogonalna - baza wektorów które są do siebie prostopadłe
+
+baza ortonormalna - baza to baza ortogonalna, ale jej wektory są znormalizowane ( Q z wejściówki )
+
+jeżeli Av = lamba v to lambda jest wartością własną macierzy A 
+
+wyznacznik z A - lambda I to wielomian charakterystyczny macierzy
+| a - lambda     c     |
+|    b        d-lambda | = (a - lambda)(d - lambda) - bc = 0
+
+jesli mamy macierz trójkątną lub macierz diagonalną to wartości na głównej przekątnej to wartości własne macierzy 
+
+
+A = QR
+A0 = A
+A1 = Q0^-1 A0 Q0
+A2 = 
+AK zachowuje wartości własne, ale dązy do macierzy trójkątnej górnej
