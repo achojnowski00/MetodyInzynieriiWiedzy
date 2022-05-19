@@ -1,26 +1,70 @@
 Wektor - to uporządkowana para punktów (strzałka wyznaczona przez dwa punkty). Wektor ma trzy cechy, które go jednoznacznie wyznaczają: długość (czasami inaczej zwana modułem lub wartością) kierunek (kierunek prostej zawierającej wektor)
+Wektor - kolumna lub wiersz z macierzy ( tu raczej trzeba byloby objaśnić lepiej niz tylko to )
 
-kombinacja liniowa - 
+
+kombinaja liniowa - działania na wektorach gdzie mamy mnożenie wektorów przez skalary i wynikiem to będzie suma tych działań
+( Dodawanie wektorów pomnożoych przez ich skalary )
 mamy wektory e1 i e2 kombinacja liniowa to alfa*e1 + beta*e2
 
-baza w przestrzeni RX- zbioor wektorów liniowo niezaleznych rozpinających przestrzeń, czyli za pomocą wektorów bazy można stworzyć każdy inny wektor w przestrzeni RX za pomoca kombinacji liniowej tej bazy
+
+baza w przestrzeni RX- zbiór wektorów liniowo niezaleznych rozpinających przestrzeń, czyli za pomocą wektorów bazy można stworzyć każdy inny wektor w przestrzeni RX za pomoca kombinacji liniowej wektorów z tej bazy
 Jeśli wetory są niezalezne liniowo to ich ilosc w bazie jest wymiarem w przestrzeni. 
 2 wektory to R2, 5 wektorów to R5
+
+
+Rząd macierzy - ilość liniowo nie zależnych wektorów w tej macierzy
+
 
 co to znaczy, że wektory są ortogonalne? To znaczy, że są do siebie prostopadłe 
 jeśli 2 wektory są prostopadle to ich iloczyn skalarny równa się 0
 
+
 Unormować wektor to podzielenie go przez jego długość, czyli zmienić jego dlugosc tak zeby jego dlugość była równa jeden
 
-baza ortogonalna - baza wektorów które są do siebie prostopadłe
 
-baza ortonormalna - baza to baza ortogonalna, ale jej wektory są znormalizowane ( Q z wejściówki )
+baza ortogonalna w przestrzeni Rx - zbiór wektorów które są liniowo niezależne, rozpinają przestrzeń Rx oraz są do siebie prostopadłe
 
+
+baza ortonormalna w przestrzeni Rx - zbiór wektorów niezależnych liniowo o długości 1, które rozpinają przestrzeń Rx oraz są do siebie prostopadłe
+baza to baza ortogonalna, ale jej wektory są znormalizowane ( Q z wejściówki )
+
+
+Dla bazy ortogonalnej
+B.T razy B daje nam macierz diagonalną gdzie na głównej przekątnej mamy wartości WektorX.T razy WektorX
+Jeżeli takie działanie zastosujemy dla macierzy ortonormalnej to B.T razy B daje nam macierz diagonalną JEDNOSTKOWĄ
+N - macierz ortonormalna
+N.T razy N = I = N.-1 razy N => N.T = N.-1
+
+
+Macierz Diagonalna daje nam odrazu wyznacznik i wartości własne macierzy
+
+
+Wartości własne:
 jeżeli Av = lamba v to lambda jest wartością własną macierzy A 
+3x3 razy 3x1 = 3x1 = lambda razy 3x1
+
+
+jeżeli dodatkowo mamy macierz symetryczną to ???
+
+
+wektor własny macierzy pomnozony przez tą macierz nie zostanie obrócony tylko jedynie rozciągnięty, zmniejszony lub odwrócony zwrot 
+
+
+transpozycja hermitowska - transpozycja a wdodatkowo sprzężenie
+
+
+sprzężenie - odbicie liczby względem osi rzeczywistej
+jeśli mamy liczbe 1+i to sprzężenie tej liczby to 1-i
+.H - transpozycja hermitowska
+
+
+jeżeli   lamba = lambda.H   to lambda nie jest urojona
+
 
 wyznacznik z A - lambda I to wielomian charakterystyczny macierzy
 | a - lambda     c     |
 |    b        d-lambda | = (a - lambda)(d - lambda) - bc = 0
+
 
 jesli mamy macierz trójkątną lub macierz diagonalną to wartości na głównej przekątnej to wartości własne macierzy 
 
@@ -30,3 +74,17 @@ A0 = A
 A1 = Q0^-1 A0 Q0
 A2 = 
 AK zachowuje wartości własne, ale dązy do macierzy trójkątnej górnej
+
+
+Macierz - układ liczb ułożonych w prostokątnej tablicy ?
+
+
+Projekcja to "sprzsowanie wektora" na wektor na który projektujemy. Dostajemy odcinek który mówi nam ile wektor "idzie" na boki a nie od przodu
+
+
+Iloczyn skalarny tego samego wektora to kwadrat długości tego wektora
+
+
+NA KOLOKWIUM:
+napisać kolokwium plus jakies prace domowe potem da i przy wystawianiu ocen sprawdzenie repozytorium na gicie
+rozkład QR - to już będzie bliżej 3ki
