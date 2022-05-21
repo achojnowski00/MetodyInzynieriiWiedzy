@@ -1,13 +1,13 @@
 import numpy as np
 
-matrix = np.array([[1, 1, 1, 1, 1, 1, 1, 1],
-                   [1, 1, 1, 1, -1, -1, -1, -1],
-                   [1, 1, -1, -1, 0, 0, 0, 0],
-                   [0, 0, 0, 0, 1, 1, -1, -1],
-                   [1, -1, 0, 0, 0, 0, 0, 0],
-                   [0, 0, 1, -1, 0, 0, 0, 0],
-                   [0, 0, 0, 0, 1, -1, 0, 0],
-                   [0, 0, 0, 0, 0, 0, 1, -1], ])
+matrix = np.array([[1., 1., 1., 1., 1., 1., 1., 1.],
+                   [1., 1., 1., 1., -1., -1., -1., -1],
+                   [1., 1., -1., -1., 0., 0., 0., 0.],
+                   [0., 0., 0., 0., 1., 1., -1., -1.],
+                   [1., -1., 0., 0., 0., 0., 0., 0.],
+                   [0., 0., 1., -1., 0., 0., 0., 0.],
+                   [0., 0., 0., 0., 1., -1., 0., 0.],
+                   [0., 0., 0., 0., 0., 0., 1., -1.]])
 
 
 def isMatrixOrtagonalna(matrix, epsilon=0.05):
@@ -67,7 +67,7 @@ normalizedMatrix = normalize(matrix)
 # print(isMacierzOrtonormalna(normalizedMatrix))
 
 
-wektor = [8, 6, 2, 3, 4, 6, 6, 5]
+wektor = np.array([8., 6., 2., 3., 4., 6., 6., 5.])
 wektorWBazieOrtonormalnej = przejsciePrzezBaze(
     wektor, matrix, normalizedMatrix)
 print(wektorWBazieOrtonormalnej)
