@@ -16,7 +16,7 @@ Rząd macierzy - ilość liniowo nie zależnych wektorów w tej macierzy
 
 
 co to znaczy, że wektory są ortogonalne? To znaczy, że są do siebie prostopadłe 
-jeśli 2 wektory są prostopadle to ich iloczyn skalarny równa się 0
+jeśli 2 wektory są prostopadle / ortogonalne to ich iloczyn skalarny równa się 0
 
 
 Unormować wektor to podzielenie go przez jego długość, czyli zmienić jego dlugosc tak zeby jego dlugość była równa jeden
@@ -88,3 +88,28 @@ Iloczyn skalarny tego samego wektora to kwadrat długości tego wektora
 NA KOLOKWIUM:
 napisać kolokwium plus jakies prace domowe potem da i przy wystawianiu ocen sprawdzenie repozytorium na gicie
 rozkład QR - to już będzie bliżej 3ki
+
+
+-----------------------------------------
+baza standardowa - macierz jednostkowa
+
+1  1  1  1  1  1  1  1
+1  1  1  1 -1 -1 -1 -1
+1  1 -1 -1  0  0  0  0
+0  0  0  0  1  1 -1 -1
+1 -1  0  0  0  0  0  0  = B.T
+0  0  1 -1  0  0  0  0
+0  0  0  0  1 -1  0  0
+0  0  0  0  0  0  1 -1
+
+1) sprawdzic czy B ma wektory ortogonalne
+    B razy B.T  czy da nam macierz diagonalna
+
+2) znormalizować wektory w B 
+
+3) tak zmodyfikowaną B sprawdzić czy jest ortonormalna
+    czyli jak B razy B.T da nam macierz jednostkowa
+
+4) przeprowadzić wektor [ 8 6 2 3 4 6 6 5] z bazy standardowej do bazy B po normalizacji
+
+program i ręcznie
