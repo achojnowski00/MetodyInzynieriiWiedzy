@@ -8,7 +8,7 @@ matrix = np.array([[1., 1., 1., 1., 1., 1., 1., 1.],
                    [0., 0., 1., -1., 0., 0., 0., 0.],
                    [0., 0., 0., 0., 1., -1., 0., 0.],
                    [0., 0., 0., 0., 0., 0., 1., -1.]])
-
+jednostkowaMacierz = np.identity(len(matrix))
 
 def isMatrixOrtagonalna(matrix, epsilon=0.05):
     dot = np.dot(matrix, matrix.T)
@@ -51,13 +51,13 @@ def isMacierzOrtonormalna(matrix, epsilon=0.05):
     return isMatrixJednostkowa(dot)
 
 
-def przejsciePrzezBaze(wektor, bazaPocz, bazaNowa):
-    xb = []
-    if isMacierzOrtonormalna(bazaNowa):
-        if isMatrixJednostkowa(bazaPocz):
-            return np.dot(bazaNowa.T, wektor)
-        return np.dot(np.dot(bazaNowa.T, bazaPocz), wektor)
-    return np.dot(np.dot(np.linalg.inv(bazaNowa), bazaPocz), wektor)
+def przejsciePrzezBaze(wektor, bazaStara, bazaNowa):
+    if isMatrixOrtagonalna(bazaNowa):
+        if isMacierzOrtonormalna(bazaNowa):
+            return np.dot(bazaNowa, wektor)
+        return np.dot(np.dot(bazaNowa.T, bazaStara), wektor)
+    return np.dot(np.dot(np.linalg.inv(bazaNowa), bazaStara), wektor)
+
 
 
 # print(isMatrixOrtagonalna(matrix))
@@ -67,12 +67,8 @@ normalizedMatrix = normalize(matrix)
 # print(isMacierzOrtonormalna(normalizedMatrix))
 
 
+
 wektor = np.array([8., 6., 2., 3., 4., 6., 6., 5.])
 wektorWBazieOrtonormalnej = przejsciePrzezBaze(
-    wektor, matrix, normalizedMatrix)
+    wektor, jednostkowaMacierz, normalizedMatrix)
 print(wektorWBazieOrtonormalnej)
-
-# Sprawdzenie, czyli przejscie z bazy znormalizowanej do bazy początkowej
-powrotDoBazy = przejsciePrzezBaze(
-    wektorWBazieOrtonormalnej, normalizedMatrix, matrix)
-print(powrotDoBazy)
