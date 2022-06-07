@@ -52,7 +52,12 @@ def szukanieWartosciWlasnych(a, epsilon=0.0001):
 
 
 
-
+def wektoryWlasne(macierz):
+    if(len(macierz)!=len(macierz[0])):
+        print("Nie jest macierza kwadratowa, podaj macierz kwadratową")
+        return
+    wynik = np.linalg.eigh(macierz)[1]
+    print(zaookroglenie(wynik))
 
 
 
@@ -163,5 +168,11 @@ for i in range(len(wynik)):
                wartoscWlasna = np.round(wynik[i],3)))
 
 
+matrixC = np.array([
+    [1, 2, 2],
+    [2, 8, 0],
+    [2, 0, 4]
+])
 
+wektoryWlasne(matrixC)
 
